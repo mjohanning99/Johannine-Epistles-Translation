@@ -1,0 +1,108 @@
+\documentclass[a5paper,twoside,11pt,openany]{book}
+
+%%%%%%%%%% Packages %%%%%%%%%%
+\include{packages.tex}
+
+%%%%%%%%%% Titles %%%%%%%%%%
+\newcommand{\shorttitle}{The Johannine Epistles}
+\title{The Johannine Epistles: A Modern Translation with Notes and the Original Greek Text}
+
+%%%%%%%%%% Document begin %%%%%%%%%%
+\begin{document}
+\frontmatter
+\pagenumbering{gobble}
+\pagestyle{empty}
+
+%%%%%%%%%% Half-title %%%%%%%%%%
+\include{text/frontmatter/halftitle.tex}
+
+%%%%%%%%%% Title page %%%%%%%%%% 
+\include{text/frontmatter/title.tex}
+
+%%%%%%%%%% Title page Greek %%%%%%%%%% 
+\include{text/frontmatter/titlegreek.tex}
+
+%%%%%%%%%% Copyright and Impressum %%%%%%%%%%
+\include{text/frontmatter/copyright.tex}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+
+%%%%%%%%%% Introductory quote %%%%%%%%%%
+\include{text/frontmatter/quote.tex}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+
+%%%%%%%%%% Table of Contents %%%%%%%%%%
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+  
+%%%%%%%%%% Introduction and Preface %%%%%%%%%%
+\part*{\textsc{Preface}}
+	\markboth{Preface}{Preface}
+	\addcontentsline{toc}{part}{Preface}
+
+\pagestyle{fancy}
+\pagenumbering{roman}
+\input{text/frontmatter/intro.tex}
+
+%%%%%%%%%% Note %%%%%%%%%%
+\include{text/frontmatter/note.tex}
+
+%%%%%%%%%% About %%%%%%%%%%
+\include{text/frontmatter/about.tex}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+
+%%%%%%%%%% Beginning of 1 John %%%%%%%%%%
+\pagenumbering{gobble}
+\part*{\textsc{1 John}}
+	\markboth{1 John}{1 John}
+	\addcontentsline{toc}{part}{1 John}
+  
+\thispagestyle{empty}\mainmatter
+\input{text/1john/chapters/chapter1.tex}
+\input{text/1john/chapters/chapter2.tex}
+\input{text/1john/chapters/chapter3.tex}
+\input{text/1john/chapters/chapter4.tex}
+\input{text/1john/chapters/chapter5.tex}
+
+%%%%%%%%%% Beginning of 2 John %%%%%%%%%%
+\part*{\textsc{2 John}}
+	\markboth{2 John}{2 John}
+	\addcontentsline{toc}{part}{2 John}
+ 
+\thispagestyle{empty}
+\setcounter{chapter}{0}
+\input{text/2john/chapter1.tex}
+
+%%%%%%%%%% Beginning of 3 John %%%%%%%%%%
+\part*{\textsc{2 John}}
+	\markboth{2 John}{2 John}
+	\addcontentsline{toc}{part}{2 John}
+  
+\thispagestyle{empty}
+\setcounter{chapter}{0}
+\input{text/3john/chapter1.tex}
+
+%%%%%%%%%% Appendix %%%%%%%%%%
+\pagenumbering{gobble}
+\part*{\textsc{Appendix}}
+	\markboth{Appendix}{Appendix}
+	\addcontentsline{toc}{part}{Appendix}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+
+\pagenumbering{roman}
+\input{text/backmatter/greekletters.tex}
+\input{text/backmatter/furtherreading.tex}
+\input{text/backmatter/afterword.tex}
+
+\end{document}
